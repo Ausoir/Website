@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Personality Quiz",
-  description: "Discover your personality type in a few quick questions.",
+  title: "PK Lab",
+  description: "Micro/Macro psychokinesis test console.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
@@ -30,7 +29,7 @@ export default async function AccountPage() {
     <div className="flex flex-1 flex-col items-center bg-zinc-50 dark:bg-black">
       <main className="w-full max-w-xl flex-1 px-6 py-16">
         <h1 className="text-2xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50">
-          Your quiz history
+          Your history
         </h1>
         <p className="mt-1 text-sm text-zinc-500">{user.email}</p>
 
@@ -54,25 +53,11 @@ export default async function AccountPage() {
                   {attempt.result_profiles.code})
                 </p>
               )}
-              {attempt.quizzes?.slug && (
-                <Link
-                  href={`/quiz/${attempt.quizzes.slug}`}
-                  className="mt-2 inline-block text-sm font-medium text-zinc-950 underline dark:text-zinc-50"
-                >
-                  Retake
-                </Link>
-              )}
             </div>
           ))}
 
           {!attempts?.length && (
-            <p className="text-sm text-zinc-500">
-              No quizzes taken yet.{" "}
-              <Link href="/" className="underline">
-                Take one
-              </Link>
-              .
-            </p>
+            <p className="text-sm text-zinc-500">No history yet.</p>
           )}
         </div>
       </main>
