@@ -11,7 +11,7 @@ export async function SiteHeader() {
   return (
     <header className="flex items-center justify-between border-b border-zinc-200 px-6 py-4 dark:border-zinc-800">
       <Link href="/" className="font-semibold text-zinc-950 dark:text-zinc-50">
-        PK Lab
+        PP Lab
       </Link>
 
       {user ? (

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PK Lab",
+  title: "PP Lab",
   description: "Micro/Macro psychokinesis test console.",
 };
 
